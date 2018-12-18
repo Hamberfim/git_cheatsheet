@@ -1,4 +1,5 @@
 # git cheat-sheet
+I got this somewhere on github....but I forget where.
 
 ### Current state
 `git status`					list which (unstaged) files have changed  
