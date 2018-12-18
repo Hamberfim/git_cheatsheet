@@ -1,17 +1,17 @@
 # git cheat-sheet
 
-### current state
+### Current state
 `git status`					list which (unstaged) files have changed  
 `git diff`						list (unstaged) changes to files  
 `git log`						list recent commits  
 
 
-### adding files to repo
+### Adding files to repo
 `git add fn`					stage file  
 `git commit -m 'message'`			commit file  
 `git commit -am 'message'`		add/commit all changes from all tracked files (no untracked files) in one go  
 
-### undoing previous actions
+### Undoing previous actions
 http://git-scm.com/book/en/Git-Tools-Rewriting-History  
 `git reset filename`				unstage file  
 `git commit --amend -m 'message'`	alter the last commit (add any staged files, new comment)  
@@ -21,7 +21,7 @@ http://git-scm.com/book/en/Git-Tools-Rewriting-History
 `git checkout -- cats.html index.html`	Undo all changes that were made to files cats.html and index.html  
 `git rebase --onto <commit-id>\^ <commit-id> HEAD`	remove specific commit from repository. the \ in \^ is just an escape   char to make zsh play nice and is not necessary if using bash.  
 
-### remote repositories
+### Remote repositories
 `git remote add origin git@example.com:example/petshop.git` add a remote repository  
 `git push -u origin master`			push current local repo to remote. -u sets it to default for the future  
 `git remote -v show`				show the available remote repositories that have been added  
@@ -46,17 +46,17 @@ http://git-scm.com/book/en/Git-Tools-Rewriting-History
 `git checkout -b branchname`			create and checkout new branch in one go  
 `git branch -d branchname`			remove branch  
 
-#### merging branch back to master
+#### Merging branch back to master
 `git checkout master; git merge branchname;`	conditions for fast-forward merge - nothing new on master between branch start/end points  
 
-### branches on remote
+### Branches on remote
 `git fetch origin``git branch -r` 		list remote branches (after a fetch)  
 `git push origin :branchname`		delete remote branch 'branchname'  
 `git remote prune origin`			clean up deleted remote branches (let's say someone else deleted a branch on the remote)  
 `git show remote origin`			show local<->remote branch tracking and sync status (duplicate info under "remote repositories")  
 
 
-#### push local branch to differently named remote branch. Eg Heroku only deploys master
+#### Push local branch to differently named remote branch. Eg Heroku only deploys master
 `git push heroku yourbranch:master`       simple form  
 `git push heroku-staging staging:master` 	(localBranchName:remoteBranchName)  
 
