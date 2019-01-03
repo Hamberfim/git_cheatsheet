@@ -14,8 +14,8 @@ Change the current working directory to the local repository where you want to c
 `git config --global credential.helper 'cache --timeout=3600'`					cache for 1 hour  
 
 ### Check Credential settings
-`git config --global user.name`					Global  
-`git config user.name`					Single Repository
+`git config --global user.name`					global  
+`git config user.name`					single Repository
 
 ### Current state
 `git status`					list which (unstaged) files have changed  
