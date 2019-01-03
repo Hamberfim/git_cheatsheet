@@ -1,6 +1,22 @@
 # git cheat-sheet
 I got the original of this somewhere on github....but I forget where. I've added content.
 
+### Setting Global Credentials
+`git config --global user.name "your username"`  
+`git config --global user.password "your password"`  
+
+### Setting Single Repository Credentials
+Change the current working directory to the local repository where you want to configure the name that is associated with your Git commits.  
+`git config user.name "your username"`
+
+### Cache Credentials
+`git config --global credential.helper cache`					default cache 15 mins.  
+`git config --global credential.helper 'cache --timeout=3600'`					cache for 1 hour  
+
+### Check Credential settings
+`git config --global user.name`					Global  
+`git config user.name`					Single Repository
+
 ### Current state
 `git status`					list which (unstaged) files have changed  
 `git diff`						list (unstaged) changes to files  
